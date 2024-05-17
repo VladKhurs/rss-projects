@@ -1,0 +1,320 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.black {
+    background-color: rgb(0, 0, 0);
+    height: 200px;
+    width: 200px;
+}
+
+.div-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-right {
+    width: 410px;
+    background-color: pink;
+}
+
+.div-left {
+    width: 410px;
+    background-color: pink;
+    padding: 10px;
+}
+
+.div-img {
+    width: 260px;
+    height: 350px;
+    background-image: url("./assets/gallows.svg");
+    background-size: cover;
+}
+
+.par {
+    text-align: center;
+}
+
+.man {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    height: 181px;
+    position: relative;
+    top: -245px;
+    left: 160px;
+}
+
+.top-man,
+.cen-man,
+.but-man {
+    display: flex;
+    flex-direction: row;
+}
+
+.but-man {
+    margin-left: 2px;
+}
+
+.top-man,
+.pen,
+.lef-hen,
+.rig-hen,
+.lef-leg,
+.rig-leg {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top-man {
+    background-image: url("./assets/head.svg");
+    display: flex;
+    align-self: center;
+}
+
+.pen {
+    background-image: url("./assets/body.svg");
+    background-size: auto;
+    width: 4px;
+}
+
+.pen-margin {
+    margin-left: 60px;
+}
+
+.lef-hen {
+    background-image: url("./assets/hand-one.svg");
+}
+
+.rig-hen {
+    background-image: url("./assets/hand-two.svg");
+}
+
+.lef-leg {
+    background-image: url("./assets/leg-one.svg");
+}
+
+.rig-leg {
+    background-image: url("./assets/leg-two.svg");
+}
+
+.score {
+    color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.task-but {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.word {
+    display: flex;
+    flex-direction: row;
+}
+
+.letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    background-color: azure;
+}
+
+.letter-start {
+    border-bottom: 3px solid black;
+}
+
+.key {
+    width: 35px;
+    height: 30px;
+    background-color: dodgerblue;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pressed {
+    cursor: default;
+    background-color: #e5f1ff;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 388px;
+    justify-content: center;
+}
+
+.div-right {
+    padding: 10px;
+}
+
+.modal-wrap {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 230px;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.modal-word {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-button {
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.div-left {
+    height: 416px;
+}
+
+.modal-result, .modal-word, .modal-button {
+    align-self: center;
+    margin-bottom: 25px;
+}
+
+
+@media (max-width: 830px) {
+    .div-main {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 410px) {
+    .div-right, .div-left {
+        width: 100%;
+    }
+    .keyboard {
+        width: 100%;
+    }
+}
