@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/ico/audio-player-icon.JPG">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <title>Audio Player</title>
+</head>
+<body>
+<script src="./index.js"></script>
+    <header>
+
+    </header>
+
+    <main class="main">
+        <img src="./assets/img/lemonade.png" alt="musec-avatar" width="100%" height="100%" class="ava-bgi">
+        <div class="card">
+            <div class="card-top">
+                <img src="./assets/img/lemonade.png" alt="musec-avatar" width="350" height="300" class="ava-img">
+            </div>
+            <div class="card-button">
+                <div class="card-center">
+                    <div class="card-center-left">
+                        <button class="play-button"></button>
+                    </div>
+                    <div class="card-center-center">
+                        <p class="author-text">Beyonce</p>
+                        <p class="song-name">Dont't Hurt Yourself</p>
+                    </div>
+                    <div class="card-center-right">
+                        <button class="prev"></button>
+                        <button class="next"></button>
+                    </div>
+                </div>
+                <div class="cart-foot">
+                    <audio preload="metadata" src="./assets/audio/beyonce.mp3" class="audio"></audio>
+                    <div class="song-length">3:303</div>
+                    <div class="progress-wrap">
+                        <div class="progress-inner"></div>
+                    </div>
+                    <div class="current-time">0:00</div>
+                    <a href="./assets/audio/beyonce.mp3" download="beyonce.mp3" id="downlLink" class="download-link">
+                        <div class="downlaod-wrap">
+                            <p class="download-text">Download song</p>
+                            <img src="./assets/img/download.png" alt="" height="18">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <div>
+                        <a href="https://github.com/VladKhurs/" class="link">Github: VladKhurs</a>
+                    </div>
+                    <div>2023</div>
+                </div>
+                <div><a href="https://rs.school/js-stage0/"><img src="./assets/svg/rs_school_js.svg" alt="" width="60"></a></div>
+            </div>
+        </div>
+    </main>  
+</body>
+</html>
