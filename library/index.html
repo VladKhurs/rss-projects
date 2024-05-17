@@ -1,0 +1,788 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/library-icon.JPG">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body class="body-class" id="bodyId">
+<script src="./index.js"></script>
+        <header class="header">
+            <div class="container">
+                <div class="h-top">
+                    <div class="div-h1">
+                        <h1 class="h-h1">Brooklyn Public Library</h1>
+                    </div>
+                    <div class="nav-and-img">
+                        <nav class="nav " id="overlay">
+                            <ul class="nav-list" id="id-nav-list">
+                                <li class="li1"><a href="#href-about" class="nav-link">About</a></li>
+                                <li class="li2"><a href="#href-favorites" class="nav-link">Favorites</a></li>
+                                <li class="li3"><a href="#href-shop" class="nav-link">Coffee shop</a></li>
+                                <li class="li4"><a href="#href-contacts" class="nav-link">Contacts</a></li>
+                                <li><a href="#href-card" class="nav-link">Library Card</a></li>
+                            </ul>
+                        </nav>
+                        <button id="icon-button" class="h-img">
+                            <img src="./assets/img/icon_profile.png"  alt=""  width="28" height="28" class="icon-image">
+                            <p class="icon-text icon-text-hide" title="San Dare">SD</pc>
+                        </button>
+                    
+                        <div class="burg"> <a href="javascript:void(0);" onclick="showNav()" id="id-burg">
+                            <img src="./assets/img/burger.svg" alt="" id="id-burg"> </a>
+                        </div>
+                        <img src="./assets/img/cross.svg" alt="" class="cross" width="32" height="32" id="id-cross">
+                    
+
+                    </div>
+                </div>
+                <div class="h-foot">
+
+                    <div id="icon-menu" class="profile-head hide-profile">
+                        <button id="profile-button" class="head-button-profile">
+                            <p class="profile-head-h" >
+                                Profile
+                            </p>
+                        </button>
+                        <div class="profile-line"></div>
+                            <button class="head-button">
+                                <p class="profile-head-t profile-head-mar" id="login">
+                                    Log In
+                                </p>
+                            </button>
+                            <button class="head-button">
+                                <p class="profile-head-t" id="register">
+                                    Register
+                                </p>
+                            </button>
+
+                            <button class="head-button hide-def-button">
+                                <p class="profile-head-t profile-head-mar" id="myprofile">
+                                    My profile
+                                </p>
+                            </button>
+                            <button class="head-button hide-def-button">
+                                <p class="profile-head-t logout-text" id="logout">
+                                    Log Out
+                                </p>
+                            </button>
+
+                    </div>
+                    <div class="modal-register-wrap hide-modal-register-wrap">
+                        <div class="modal-register">
+                            <div class="top-m-r">
+                                <p class="mod-text-reg">REGISTER</p>
+                                <button class="button-sross">
+                                    <img id='srossBtn' src="./assets/img/close_btn.svg" alt="close_btn" class="close-btn">
+                                </button>
+                                
+                            </div>
+                            <div class="register-data">
+                                <p class="register-text">First name</p>
+                                <input type="text" class="inputFirstName">
+                                <p class="register-text">Last name</p>
+                                <input type="text" class="inputLastName">
+                                <p class="register-text">E-mail</p>
+                                <input type="email" class="inputEmail">
+                                <p class="register-text">Password</p>
+                                <input type="password" class="inputPassword">
+                            </div>
+                            <div>
+                                <button class="button-sign">Sign Up</button>
+                            </div>
+                            <div class="buttom-m-r">
+                                <p>Already have an account?</p>
+                                <a href="#">Ligin</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="modal-login-wrap hide-modal-login-wrap">
+                        <div class="modal-login">
+                            <div class="top-m-r">
+                                <p class="mod-text-reg">LOGIN</p>
+                                <button class="button-sross">
+                                    <img id='srossBtnLogin' src="./assets/img/close_btn.svg" alt="close_btn" class="close-btn">
+                                </button>
+                                
+                            </div>
+                            <div class="register-data">
+                                <p class="register-text">E-mail or readers card</p>
+                                <input type="email" class="inputEmailLogin">
+                                <p class="register-text">Password</p>
+                                <input type="password" class="inputPasswordLogin">
+                            </div>
+                            <div>
+                                <button class="button-login">Log In</button>
+                            </div>
+                            <div class="buttom-m-r">
+                                <p>Don’t have an account?</p>
+                                <a href="#">Register</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="modal-profile-wrap hide-modal-profile-wrap">
+                        <div class="modal-profile">
+                            <div class="profile-left">
+
+                                <div class="central-block">
+                                    <div class="rectangle-profile">
+                                        JD
+                                    </div>
+                                    <div class="name-profile">
+                                        John Doe
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="profile-right">
+                                <div class="top-m-r">
+                                    <p class="profile-right-head">MY PROFILE</p>
+                                    <button class="button-sross">
+                                        <img id='srossBtnProfile' src="./assets/img/close_btn.svg" alt="close_btn" class="close-btn close-btn-profile">
+                                    </button>
+                                    
+                                </div>
+                                <div class="profile-right-data">
+                                    <div class="profile-right-data-box">
+                                        <p class="r-d-b-h">
+                                            Visits
+                                        </p>
+                                        <img src="./assets/img/Union.svg" alt="" class="r-d-b-img">
+                                        <p class="r-d-b-h-n profile-visits">
+                                            23
+                                        </p>
+                                    </div>
+
+                                    <div class="profile-right-data-box data-box-spes">
+                                        <p class="r-d-b-h">
+                                            Bonuses
+                                        </p>
+                                        <img src="./assets/img/Star1.svg" alt="" class="r-d-b-img">
+                                        <p class="r-d-b-h-n">
+                                            1240
+                                        </p>
+                                    </div>
+
+                                    <div class="profile-right-data-box">
+                                        <p class="r-d-b-h">
+                                            Books
+                                        </p>
+                                        <img src="./assets/img/book.svg" alt="" class="r-d-b-img">
+                                        <p class="r-d-b-h-n">
+                                            2
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="rentel-info ul-spes">
+                                    <p class="rented">Rented books</p>
+                                    <ul>
+                                        <li class="rented-point">
+                                            The Last Queen, Clive Irving
+                                        </li>
+                                        <li class="rented-point rented-point-special">
+                                            Dominicana, Angie Cruz
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="number-div">
+                                    <p class="text-card-number">Card number</p>
+
+                                    <p class="card-number">F00234030</p>
+                                    <button class="copy-button">
+                                        <img src="./assets/img/icon-copy.svg" alt="" class="copy">
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="modal-buy-wrap hide-modal-buy-wrap">
+                        <div class="modal-buy">
+                            <div class="buy-top">
+                                <p class="buy-lib-card">BUY A LIBRARY CARD</p>
+                                <button class="button-sross-buy">
+                                    <img id='srossBtnBuy' src="./assets/img/close_btn-white.svg" alt="close_btn" class="close-btn-buy">
+                                </button>
+                            </div>
+                            <div class="buy-buttom">
+                                <div class="buy-left">
+                                    <p class="buy-text">
+                                        Bank card number
+                                    </p>
+                                    <input type="text" class="buy-i-d">
+                                    <p class="buy-text">
+                                        Expiration code
+                                    </p>
+                                    <div class="inputs-wrap">
+                                        <input type="text" class="buy-i-d small-in s-i-s">
+                                        <input type="text" class="buy-i-d small-in">
+                                    </div>
+                                    <p class="buy-text">
+                                        CVC
+                                    </p>
+                                    <input type="text" class="buy-i-d small-in s-i-s">
+                                    <p class="buy-text buy-text-mt">
+                                        Cardholder name
+                                    </p>
+                                    <input type="text" class="buy-i-d">                                    <p class="buy-text">
+                                        Postal code
+                                    </p>
+                                    <input type="text" class="buy-i-d">                                    <p class="buy-text">
+                                        City / Town
+                                    </p>
+                                    <input type="text" class="buy-i-d i-d-last">
+
+                                    <div class="buy-wrap">
+                                        <div class="button">
+                                            <button class="buttonb buttonb-buy">Buy</button>
+                                        </div>
+                                        <p class="cost-buy">
+                                            $ 25.00
+                                        </p>
+                                    </div>
+
+                                </div>
+    
+    
+                                <div class="buy-right">
+                                    <p class="buy-r-p">
+                                        If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="h-foot-div"><p class="h-tit back-tit" ><span>Welcome</span> <span>to the Brooklyn</span> <span>Library</span> </p></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="about-text">
+                    <div class="underline-div">
+                        <h2 class="underline about" id="href-about">About</h2>
+                    </div>
+                    <div class="p">
+                        <p class="thedr">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                    </div>
+                </div>
+                <div class="about-imgs frame">
+                    <div class="scroll">
+                        <div class="arr-l arr arr-ll"><img src="./assets/img/Carret_Left.svg" alt="" class = 'arr-img'></div>
+                        <img class="about-img a-i-1 a-i-small" src="./assets/img/image 1.jpg" alt="" >
+                        <img class="about-img a-i-2 a-i-small" src="./assets/img/image 2.jpg" alt="" >
+                        <img class="about-img a-i-3 a-i-small" src="./assets/img/image 3.jpg" alt="" >
+                        <div class="arr-r arr arr-rr"><img src="./assets/img/Carret_Right.svg" alt="" class = 'arr-img'></div>
+                    </div>
+                    <div class="points">
+                        <button class="point"></button>
+                        <button class="point center-point"></button>
+                        <button class="point"></button>
+                        <button class="point center-point  s-w-b"></button>
+                        <button class="point s-w-b"></button>
+                    </div>
+                </div>
+                
+                <div class="favorites">
+                    <div class="underline-div">
+                        <h2 class="underline favorites-u favoq" id="href-favorites">Favorites</h2>
+                    </div>
+
+                    <div class="pick">
+                        <p class="pick-text">Pick favorites of season</p>
+                    </div>
+
+                    <div class="radio sticky">
+                        <label class="label-season">
+                            <input type="radio" name="question" checked class="radio-season">Winter
+                        </label>
+                        <label class="spr label-season">
+                            <input type="radio" name="question" class="radio-season">Spring
+                        </label>
+                        <label class="label-season">
+                            <input type="radio" name="question" class="summ radio-season">Summer
+                        </label class="label-season">
+                        <div class="div-s">
+                            <label class="label-au label-season">
+                                <input type="radio" name="question" class="au radio-season">Automn
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cards cards-show">
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>The Book Eaters</h3>
+                                <h3>By Sunyi Dean</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for The Faint of Heart. </p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b1 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book1.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Cackle</h3>
+                                <h3>By Rachel Harrison</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b2 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book2.jpg" alt="" class="card-img card-img2" width="200" height="300">
+                        </div>
+
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Dante: Poet of the Secular World</h3>
+                                <h3>By Erich Auerbach</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b3 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book3.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>The Last Queen</h3>
+                                <h3>By Clive Irving</h3>
+                            </div>
+                            <div class="card-long-text card-spes spes-spes">
+                                <p>A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb special b4 buttonsBuy">Buy</button>
+                            </div>
+                            <img src="./assets/img/book4.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+                    </div>
+
+                    <div class="cards cards-hide" >
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>The Body</h3>
+                                <h3>By Stephen King</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>An ununusual sci-fi story read about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, complex protagonist. Not for The Faint of Heart. </p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b1 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book5.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Carry: A Memoir of Survival on Stolen Land</h3>
+                                <h3>By Toni Jenson</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Are your movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate Halloween fg New York and befriends a beautiful witch.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b2 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book6.jpg" alt="" class="card-img card-img2" width="200" height="300">
+                        </div>
+
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Days of Distraction</h3>
+                                <h3>By Alexandra Chang</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b3 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book7.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Dominicana</h3>
+                                <h3>By Angie Cruz</h3>
+                            </div>
+                            <div class="card-long-text card-spes spes-spes">
+                                <p>A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb special b4 buttonsBuy">Buy</button>
+                            </div>
+                            <img src="./assets/img/book8.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+                    </div>
+
+                    <div class="cards cards-hide" >
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Crude: A Memoir </h3>
+                                <h3>By Pablo Fajardo & ​​Sophie Tardy-Joubert</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for The Faint of Heart. </p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b1 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book9.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Let My People Go Surfing</h3>
+                                <h3>By Yvon Chouinard</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b2 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book10.jpg" alt="" class="card-img card-img2" width="200" height="300">
+                        </div>
+
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>The Octopus Museum: Poems</h3>
+                                <h3>By Brenda Shaughnessy</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b3 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book11.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Shark Dialogues: A Novel</h3>
+                                <h3>By Kiana Davenport</h3>
+                            </div>
+                            <div class="card-long-text card-spes spes-spes">
+                                <p>A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb special b4 buttonsBuy">Buy</button>
+                            </div>
+                            <img src="./assets/img/book12.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+                    </div>
+
+                    <div class="cards cards-hide" >
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Casual Conversation</h3>
+                                <h3>By Renia White</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for The Faint of Heart. </p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b1 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book13.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>The Great Fire</h3>
+                                <h3>By Lou Ureneck</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b2 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book14.jpg" alt="" class="card-img card-img2" width="200" height="300">
+                        </div>
+
+                        <div class="card card-m">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Rickey: The Life and Legend</h3>
+                                <h3>By Howard Bryant</h3>
+                            </div>
+                            <div class="card-long-text card-spes">
+                                <p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb b3 buttonsBuy">Buy</button>
+                            </div>
+                            
+                            <img src="./assets/img/book15.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+
+                        <div class="card">
+                            <div class="card-tit">
+                                <p>Staff Picks</p>
+                            </div>
+                            <div class="card-text">
+                                <h3>Slug: And Other Stories</h3>
+                                <h3>By Megan Milks</h3>
+                            </div>
+                            <div class="card-long-text card-spes spes-spes">
+                                <p>A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                            </div>
+                            <div class="button">
+                                <button class="buttonb special b4 buttonsBuy">Buy</button>
+                            </div>
+                            <img src="./assets/img/book16.jpg" alt="" class="card-img" width="200" height="300">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop">
+                    <div class="underline-div">
+                        <h2 class="underline favorites-shop coffq" id="href-shop">Coffee Shop</h2>
+                    </div>
+                    <p class="paragraph p-shop">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. <br> You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
+                    
+                    <div class="cards-cost">
+                        <div class="coffee-wrap">
+                            <h3 class="coffee-h ct">Coffee & Tea</h3>
+                            <div class="card-cost">
+                                <div class="coffee-names">
+                                    <p class="coffee-name">Cold Brew Coffee</p>
+                                    <p class="coffee-name">French Press Pot</p>
+                                    <p class="coffee-name">Espresso</p>
+                                    <p class="coffee-name">Cappuccino</p>
+                                    <p class="coffee-name">Hot tea</p>
+                                    <p class="coffee-name">Cold tea</p>
+                                </div>
+                                <div class="lines">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="costs">
+                                    <p class="cost">$3</p>
+                                    <p class="cost">$5</p>
+                                    <p class="cost">$2</p>
+                                    <p class="cost">$4</p>
+                                    <p class="cost">$2</p>
+                                    <p class="cost">$2</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="coffee-wrap c-w-r">
+                            <h3 class="coffee-h">Desserts & Cakes  </h3>
+                            <div class="card-cost ccq">
+                                <div class="coffee-names">
+                                    <p class="coffee-name name2">Forest Gateau</p>
+                                    <p class="coffee-name name2">Blue Moon</p>
+                                    <p class="coffee-name name2">Truffle Cake</p>
+                                    <p class="coffee-name name2">Chocolate Cake</p>
+                                    <p class="coffee-name name2">Poet’s Dream Cake</p>
+                                    <p class="coffee-name name2">Pineapple Cake</p>
+                                </div>
+                                <div class="lines">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="costs cq">
+                                    <p class="cost">$3</p>
+                                    <p class="cost">$5</p>
+                                    <p class="cost">$2</p>
+                                    <p class="cost">$4</p>
+                                    <p class="cost">$2</p>
+                                    <p class="cost">$2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts">
+                    <div class="underline-div">
+                        <h2 class="underline underline-contacts ocq" id="href-contacts">Our Contacts</h2>
+                    </div>
+                    <div class="contacts-card">
+                        <div class="contacts-text">
+                            <p class="bold">For all Library inquiries:</p>
+                            <div class="contact-info">
+                                <p class="common">Please call (617) 730-2370</p>
+                                <p class="common">For TTY service, please call (617) 730-2370</p>
+                                <p class="common">Putterham Library: (617) 730-2385</p>
+                            </div>
+                            <p class="bold">Senior Staff</p>
+                            <p class="common">Library Director: <a href="mailto:" class="bold spacial-link">Amanda Hirst</a></p>
+                        </div>
+
+                        <div class="contacts-img">
+                            <img src="./assets/img/Rectangle4.jpg" alt="" width="696" height="414" class="map-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="digital">
+                    <div class="underline-div">
+                        <h2 class="underline underline-digital dlq" id="href-card">Digital Library Cards</h2>
+                    </div>
+
+                    <div class="digital-card">
+                        <div class="digital-form">
+                            <p class="form-tit">Find your Library card</p>
+                            <div class="form">
+                                <div class="form-enter">
+                                        <p class="p-f-e">Brooklyn Public Library</p>
+                                        <input type="text" name="Readersname" id="Readersname" placeholder="Reader's name" class="placeh placeh-s">
+                                        <input type="text" name="Cardnumber" id="Cardnumber" placeholder="Card number" class="placeh">
+                                </div>
+                                <button class="buttonb form-b">Check the card</button>
+                            </div>
+                        </div>
+
+                        <div class="digital-text">
+                            <p class="digitan-text-tit">
+                                Get a reader card
+                            </p>
+                            <p class="d-t-t">You will be able to see a reader card after logging into account or you can register a new account</p>
+                            <div class="card-b">
+                                <div><button class="buttonb digital-b">Sign Up</button></div> 
+                                <div><button class="buttonb digital-b-login">Log in</button></div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+            <div class="container">
+                <footer class="footer">
+                    <div class="f1">
+                        <p class="f-info-l">286 Cadman Plaza, New York, NY 11238, United States</p>
+                        <div class="f-info-r"><p>Mon - Fri </p> <p >08:00 am - 07:00 pm</p></div>
+                    </div>
+                    
+                    <div class="f1 f1-spec">
+                        <div class="f-img">
+                            <img src="./assets/img/u_twitter-alt.svg" alt="">
+                            <img src="./assets/img/u_instagram.svg" alt="">
+                            <img src="./assets/img/u_facebook-f.svg" alt="">
+                        </div>
+                        <div class="f-info-r"><p>Sat - Sun </p> <p> 10:00 am - 06:00 pm</p></div>
+                    </div>
+
+                    <div class="f-line"></div>
+
+                    <div class="f-b">
+                        <p class="p-f-b">2023</p>
+                        <p class="p-f-b fff">The Rolling Scopes School</p>
+                        <p class="p-f-r">Vladislav</p>
+                    </div>
+                </footer>
+            </div>
+
+    
+</body>
+</html>
