@@ -9,4 +9,5 @@
 7) https://vladkhurs.github.io/rss-projects/hangman/
 8) https://vladkhurs.github.io/rss-projects/audio-player/
 9) https://6674a49ea79a96d246798e77--melodious-cranachan-2dd4bf.netlify.app/
+10) https://astonishing-mandazi-638451.netlify.app/
 
