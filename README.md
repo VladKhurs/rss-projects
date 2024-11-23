@@ -1,4 +1,4 @@
-Проекты созданные во время обучения в Rolling Scopes School:
+Портфолио:
 
 1) https://astonishing-mandazi-638451.netlify.app/
 2) https://vladkhurs.github.io/rss-projects/coffee-house/
