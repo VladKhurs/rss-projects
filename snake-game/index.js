@@ -356,10 +356,10 @@ addEventListener('DOMContentLoaded', (event) => {
             }
 
             if(oldHeadX < pix || oldHeadY < 3 * pix || oldHeadX > pix * 17 || oldHeadY > pix * 17 || isCrash()){
-                if(direction === 'rigth') oldHeadX -= pix
-                if(direction === 'left') oldHeadX += pix
-                if(direction === 'top') oldHeadY += pix
-                if(direction === 'down') oldHeadY -= pix
+                if(direction === 'rigth') oldHeadY -= pix
+                if(direction === 'left') oldHeadY += pix
+                if(direction === 'top') oldHeadX += pix
+                if(direction === 'down') oldHeadX -= pix
             }
 
             let newHead = {
