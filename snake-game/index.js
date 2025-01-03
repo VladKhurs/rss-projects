@@ -352,14 +352,61 @@ addEventListener('DOMContentLoaded', (event) => {
             if(direction === 'down') oldHeadY += pix
 
             let isCrash = () => {
+                for(let i = 0; i < snake.length; i++){
+                    if (oldHeadX === snake[i].x && oldHeadY === snake[i].y){
+                        return true
+                    }
+                }
                 return false
             }
 
             if(oldHeadX < pix || oldHeadY < 3 * pix || oldHeadX > pix * 17 || oldHeadY > pix * 17 || isCrash()){
-                if(direction === 'rigth') oldHeadY -= pix
-                if(direction === 'left') oldHeadY += pix
-                if(direction === 'top') oldHeadX += pix
-                if(direction === 'down') oldHeadX -= pix
+                deadAud.play()
+                isDeath = true
+                takenResultsBefore = []
+                for(let i = 0; i < takenResults.length; i++){
+                    takenResultsBefore.push(takenResults[i])
+                }
+                if(score !== 0){
+                    takenResults.push(score)
+                }
+                takenResults.sort((a, b) => b - a)
+                if(takenResults.length > 10){
+                    takenResults.length = 10
+                }
+                if(takenResults !== takenResultsBefore){
+                    localStorage.setItem('localResults', JSON.stringify(takenResults))
+                    for(let i = 0; i < takenResults.length; i++){
+                        tableRecords[i].innerHTML = takenResults[i]
+                    }
+                }
+
+                takenLevelsBefore = []
+                takenLevelsBefore.push(takenLevels[0])
+
+                playedLevel = Math.floor(takenResults[0] / 5) + 1
+                
+                if(playedLevel > passedLevel){
+                    passedLevel++
+                    takenLevels[0] = passedLevel
+                }
+
+                if(takenLevels !== takenLevelsBefore){
+                    localStorage.setItem('localLevels', JSON.stringify(takenLevels))
+                    //for(let i = 0; i < takenLevels.length; i++){
+                    //    tableRecords[i].innerHTML = takenLevels[i]
+                    //}
+                }
+
+                drawLevelStyle()
+
+                scoreAmount.innerHTML = score
+                clearInterval(game)
+                setTimeout(()=> {
+                    snakeField.classList.toggle('hide')
+                    arrows.classList.toggle('hide')
+                    replayMenu.classList.toggle('hide')
+                }, 250)
             }
 
             let newHead = {
